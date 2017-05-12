@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <meta name="description" content="OpenStationMap">
+    <meta name="keywords" content="OpenStationMap Vector, Indoor,Indoor Map, OSM, Open Street Map">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <title>OpenStationMap</title>
+    
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.32.0/mapbox-gl.css' rel='stylesheet'/>    
+    <link href="https://openstationmap.org/0.5.0/style/style.css" rel="stylesheet">
+    
+    <link href="https://openstationmap.org/0.5.0/geocoder/gecoder.css" rel="stylesheet">
+    <link href="https://openstationmap.org/0.5.0/levelbar/levelbar.css" rel="stylesheet">    
+    <link href="https://openstationmap.org/0.5.0/stylechanger/stylechanger.css" rel="stylesheet">
+   
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.32.0/mapbox-gl.js'></script> 
+
+    <link rel="icon" type="image/svg" href="./favicon.svg"> 
+
+</head>
+<body>
+    <div id='map'></div> 
+    <div id='infor'> <a href="http://openstationmap.org/html.html">Switch to old HTML 4 Version</a> </div>
+
+
+<!-- Use old Overpass Version if WebGl is not supported  -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-supported/v1.2.0/mapbox-gl-supported.js'></script>
+    <script type="text/javascript">
+    if (!mapboxgl.supported()) {
+        console.log("Mapbox GL is NOT supported");
+        window.location.replace('html.html');
+    } 
+    </script>
+<!--
+<script src='./0.5.0/style/mapstyle.json'></script>
+-->
+<script>
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoicm9sYW5kbXdhZ25lciIsImEiOiJjajEzN29mYjEwMTFjMndsajlvdGNpZjc1In0.mc2ZqywsTm4xWwO-fSy6Cg';
+var map = new mapboxgl.Map({
+    container:  'map',
+    style: "https://openstationmap.org/0.5.0/style/mapstyle.json" , //style ,    https://openstationmap.org/0.5.0/style/mapstyle.json https://raw.githubusercontent.com/mapbox/mapbox-gl-styles/master/styles/empty-v9.json mapbox://styles/mapbox/basic-v9
+    center: [2.35976,  48.87682],    // Ostbahnhof [13.43477,  52.51022], 
+    zoom: 18, 
+    maxzoom: 22,
+    hash: true
+});
+
+map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+map.addControl(new mapboxgl.GeolocateControl(), 'bottom-left');
+</script>
+
+<script src='https://openstationmap.org/0.5.0/style/indoorstyle2d.js'></script>
+<script src='https://openstationmap.org/0.5.0/style/indoorstyle3d.js'></script>
+<script src='https://openstationmap.org/0.5.0/style/sncf.js'></script>
+<script src='https://openstationmap.org/0.5.0/geocoder/geocoder.js'></script>
+
+<script src='https://openstationmap.org/0.5.0/stylechanger/stylechanger.js'></script> 
+
+<script src='https://openstationmap.org/0.5.0/levelbar/levelbar.js'></script> 
+<script src='https://openstationmap.org/0.5.0/javascript/init.js'></script> 
+
+</body>
+</html>
