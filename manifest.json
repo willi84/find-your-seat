@@ -1,6 +1,6 @@
 {
   "name": "Find your Seat",
-  "short_name": "FYSeat",
+  "short_name": "Find your Seat",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#FE5400",
