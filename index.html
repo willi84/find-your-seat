@@ -25,9 +25,9 @@
 <body>
     <div id='map'></div> 
     <div id='infor'> <a href="http://openstationmap.org/html.html">Switch to old HTML 4 Version</a> </div>
+    
 
-
-<!-- Use old Overpass Version if WebGl is not supported  -->
+        <!-- Use old Overpass Version if WebGl is not supported  -->
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-supported/v1.2.0/mapbox-gl-supported.js'></script>
     <script type="text/javascript">
     if (!mapboxgl.supported()) {
@@ -52,7 +52,6 @@ var map = new mapboxgl.Map({
 
 map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
 map.addControl(new mapboxgl.GeolocateControl(), 'bottom-left');
-
 
 </script>
 
