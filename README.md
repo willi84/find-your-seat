@@ -1,3 +1,5 @@
+![ ](https://raw.githubusercontent.com/willi84/find-your-seat/master/images/icon-512x512.png "Find your seat")
+
 # find-your-seat
 
 An App to find your seat in a train (DB Hackathon)
