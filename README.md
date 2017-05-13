@@ -1,4 +1,4 @@
-![ ](https://raw.githubusercontent.com/willi84/find-your-seat/master/images/icon-512x512.png "Find your seat")
+![ ](https://raw.githubusercontent.com/willi84/find-your-seat/master/images/icon-256x256.png "Find your seat")
 
 # find-your-seat
 
